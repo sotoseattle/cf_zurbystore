@@ -1,0 +1,26 @@
+<h1>Listing products</h1>
+<table>
+  <thead>
+    <tr class='row small-12'>
+      <th class='small-8'>Name</th>
+      <th class='small-1'>Price</th>
+      <th class='small-3' colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @products.each do |product| %>
+      <tr class='row small-12'>
+        <td class='small-8'><%= product.name %></td>
+        <td class='small-1'><%= product.price %></td>
+        <td class='small-1'><%= link_to 'Show', product %></td>
+        <td class='small-1'><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class='small-1 columns'><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path, class:'button radius' %>
