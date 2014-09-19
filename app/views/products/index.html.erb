@@ -1,0 +1,31 @@
+<h1 class='view_head'>Zurby Products</h1>
+
+<table>
+  <thead>
+    <tr class='row'>
+      <th class='small-7 columns'>Name</th>
+      <th class='small-2 columns'><div class='right'>Price</div></th>
+      <th class='small-1 columns'></th>
+      <th class='small-1 columns'></th>
+      <th class='small-1 columns'></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr class='row'>
+        <td class='small-7 columns'><%= product.name %></td>
+        <td class='small-2 columns' smallish>
+          <div class='right'>
+            $<%= product.price %>
+          </div>
+        </td>
+        <td class='small-1 columns smallish'><%= link_to 'Show', product %></td>
+        <td class='small-1 columns smallish'><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class='small-1 columns smallish'><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Product', new_product_path, class:'button radius' %>

@@ -14,9 +14,20 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+    <main role="main" >
        <%= render 'layouts/messages' %>
-       <%= yield %>
+       <div class='row'>
+        <div class='small-8 columns'>
+          <%= yield %>
+        </div>
+        <aside id='zurbyexp' class='small-4 columns'>
+          <!-- <h2 class='subheader wtf'>WTF is a Zurby?</h2> -->
+          <p>
+            A Zurby (plural Zurbys or Zurbies) is an electronic robotic toy with a maniacal laughter resembling a freaky hamster or an owlish-like creature which went through a period of being a "must-have" toy following its launch in the holiday season of 1998, with continual sales until 2000. Over 40 million Zurbies were sold during the three years of its original production. Its speaking capabilities were translated into 24 languages.
+          </p>
+          <%= image_tag "tribbles.png" %>
+        </aside>
+       </div>
     </main>
   </body>
 </html>
