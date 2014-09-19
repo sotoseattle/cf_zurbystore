@@ -2,6 +2,8 @@
 
 A simple Rails Store with Zurb's Foundation framework as front end.
 
+![screenshot](https://s3.amazonaws.com/fjs6_bucket/zurbystore.jpg)
+
 ### Implementation Problems
 
 The app uses Foundation v. 5.4.0 instead of the latest available (5.4.4) because there is a conflict in the sass library between Foundation 5.4.4 and Rails 4.1.6.
