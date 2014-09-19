@@ -1,28 +1,19 @@
-== README
+# Zurby Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails Store with Zurb's Foundation framework as front end.
 
-Things you may want to cover:
+### Implementation Problems
 
-* Ruby version
+The app uses Foundation v. 5.4.0 instead of the latest available (5.4.4) because there is a conflict in the sass library between Foundation 5.4.4 and Rails 4.1.6.
 
-* System dependencies
+Bug issue tracked at: [github/zub](https://github.com/zurb/foundation/issues/5811)
 
-* Configuration
+The way I was able to circumvent the problem is detailed here: [Gist](https://gist.github.com/sotoseattle/b067e4e5d2c3cbf7e057)
 
-* Database creation
+### Description
 
-* Database initialization
+There is a single controller: Products with complete CRUD functionality.
 
-* How to run the test suite
+The default route is a list of all existing products in the database.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The user can create new products filling a form that includes name and price in USD. The user can also edit and delete a pre specified product.
