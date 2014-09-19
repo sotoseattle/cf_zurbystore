@@ -14,20 +14,39 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+    <main role="main" >
        <%= render 'layouts/messages' %>
        <div class='row'>
         <div class='small-8 columns'>
           <%= yield %>
         </div>
-        <div class='small-4 columns'>
-          <h2>WTF is a Zurby?</h2>
+        <aside id='zurbyexp' class='small-4 columns'>
+          <!-- <h2 class='subheader wtf'>WTF is a Zurby?</h2> -->
           <p>
-            A Zurby (plural Zurbys or Zurbies) is an electronic robotic toy with a maniacal laughter resembling a freaky hamster or an owlish-like creature which went through a period of being a "must-have" toy following its launch in the holiday season of 1998, with continual sales until 2000. Over 40 million Zurbies were sold during the three years of its original production. Its speaking capabilities were translated into 24 languages. It has generated countless fan groups a-la-trekkies, and have spawned even political groups and religious cults in some isolated regions of Australia and the US.
+            A Zurby (plural Zurbys or Zurbies) is an electronic robotic toy with a maniacal laughter resembling a freaky hamster or an owlish-like creature which went through a period of being a "must-have" toy following its launch in the holiday season of 1998, with continual sales until 2000. Over 40 million Zurbies were sold during the three years of its original production. Its speaking capabilities were translated into 24 languages.
           </p>
-          <%= image_tag 'Furby_picture.jpg', alt:'freaky zurby'%>
-        </div>
+        </aside>
        </div>
     </main>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html> -->

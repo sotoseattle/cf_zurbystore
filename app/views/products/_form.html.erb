@@ -1,3 +1,4 @@
+<br/>
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +12,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class='row'>
+    <div class="field small-2 columns">
+      <%= f.label :name, class:'right' %>
+    </div>
+    <div class='field small-10 columns'>
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class='row'>
+    <div class="field small-2 columns">
+      <%= f.label :price, title: "Price in USD", data: {tooltip: true },
+          class:'right' %>
+    </div>
+    <div class='field small-3 columns'>
+      <%= f.text_field :price, class:'leftf' %>
+    </div>
+    <span class='small-7 columns'></span>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br/>
 <% end %>
+<br/>
